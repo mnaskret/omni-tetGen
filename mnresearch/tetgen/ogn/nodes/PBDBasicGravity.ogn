@@ -1,0 +1,92 @@
+{
+    "PBDBasicGravity": {
+        "version": 1,
+        "description": "PBDBasicGravity",
+        "language": "Python",
+        "metadata": {
+            "uiName": "PBDBasicGravity"
+        },
+        "inputs": {
+            "points": {
+                "type": "pointf[3][]",
+                "description": "Input points",
+                "default": []
+            },
+            "velocities": {
+                "type": "vectorf[3][]",
+                "description": "Input velocities",
+                "default": []
+            },
+            "inverseMasses": {
+                "type": "float[]",
+                "description": "Inverse masses",
+                "default": []
+            },
+            "edge": {
+                "type": "int[2][]",
+                "description": "Input edges",
+                "default": []
+            },
+            "edgesRestLengths": {
+                "type": "float[]",
+                "description": "Input edges rest lengths",
+                "default": []
+            },
+            "elem": {
+                "type": "int[4][]",
+                "description": "Input tetrahedrons",
+                "default": []
+            },
+            "tetrahedronsRestVolumes": {
+                "type": "float[]",
+                "description": "Input tetrahedrons rest volumes",
+                "default": []
+            },
+            "gravity": {
+                "type": "vectorf[3]",
+                "description": "Gravity constant",
+                "default": [0.0, -9.8, 0.0]
+            },
+            "ground": {
+                "type": "float",
+                "description": "Ground level",
+                "default": -100.0
+            },
+            "velocity_dampening": {
+                "type": "float",
+                "description": "",
+                "default": 0.1
+            },
+            "ks_distance": {
+                "type": "float",
+                "description": "",
+                "default": 1.0
+            },
+            "ks_volume": {
+                "type": "float",
+                "description": "",
+                "default": 1.0
+            },
+            "num_substeps": {
+                "type": "int",
+                "description": "",
+                "default": 8
+            },
+            "sim_constraints": {
+                "type": "int",
+                "description": "",
+                "default": 1
+            }
+        },
+        "outputs": {
+            "points": {
+                "type": "pointf[3][]",
+                "description": "Output points"
+            },
+            "velocities": {
+                "type": "vectorf[3][]",
+                "description": "Output velocities"
+            }
+        }
+    }
+}

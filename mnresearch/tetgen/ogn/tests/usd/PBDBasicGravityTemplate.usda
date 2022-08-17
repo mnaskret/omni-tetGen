@@ -1,0 +1,74 @@
+#usda 1.0
+(
+    doc ="""Generated from node description file PBDBasicGravity.ogn
+Contains templates for node types found in that file."""
+)
+
+def OmniGraph "TestGraph"
+{
+    custom token evaluator:type = "push"
+    custom int2 fileFormatVersion = (1, 3)
+    custom token flatCacheBacking = "Shared"
+    custom token pipelineStage = "pipelineStageSimulation"
+
+    def OmniGraphNode "Template_mnresearch_tetgen_PBDBasicGravity" (
+        docs="""PBDBasicGravity"""
+    )
+    {
+        custom token node:type = "PythonNode"
+        custom token PythonNode:type = "mnresearch.tetgen.PBDBasicGravity"
+        custom int node:typeVersion = 1
+
+        # 14 attributes
+        custom int2[] inputs:edge = [] (
+            docs="""Input edges"""
+        )
+        custom float[] inputs:edgesRestLengths = [] (
+            docs="""Input edges rest lengths"""
+        )
+        custom int4[] inputs:elem = [] (
+            docs="""Input tetrahedrons"""
+        )
+        custom vector3f inputs:gravity = (0.0, -9.8, 0.0) (
+            docs="""Gravity constant"""
+        )
+        custom float inputs:ground = -100.0 (
+            docs="""Ground level"""
+        )
+        custom float[] inputs:inverseMasses = [] (
+            docs="""Inverse masses"""
+        )
+        custom float inputs:ks_distance = 1.0 (
+            docs="""No documentation provided"""
+        )
+        custom float inputs:ks_volume = 1.0 (
+            docs="""No documentation provided"""
+        )
+        custom int inputs:num_substeps = 8 (
+            docs="""No documentation provided"""
+        )
+        custom point3f[] inputs:points = [] (
+            docs="""Input points"""
+        )
+        custom int inputs:sim_constraints = 1 (
+            docs="""No documentation provided"""
+        )
+        custom float[] inputs:tetrahedronsRestVolumes = [] (
+            docs="""Input tetrahedrons rest volumes"""
+        )
+        custom vector3f[] inputs:velocities = [] (
+            docs="""Input velocities"""
+        )
+        custom float inputs:velocity_dampening = 0.1 (
+            docs="""No documentation provided"""
+        )
+
+        # 2 attributes
+        custom point3f[] outputs:points (
+            docs="""Output points"""
+        )
+        custom vector3f[] outputs:velocities (
+            docs="""Output velocities"""
+        )
+    }
+}
